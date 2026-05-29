@@ -1,0 +1,311 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  transition:0.3s ease;
+}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:#0f0f0f;
+  color:#fff;
+  min-height:100vh;
+  padding:30px;
+}
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+h1,h2,h3{
+  color:#39ff14;
+  margin-bottom:20px;
+}
+
+/* =========================================
+   LINKS & BUTTONS
+========================================= */
+
+a{
+  text-decoration:none;
+}
+
+.btn,
+button{
+  background:#39ff14;
+  color:#111;
+  border:none;
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  display:inline-block;
+}
+
+.btn:hover,
+button:hover{
+  background:#fff;
+  transform:translateY(-2px);
+}
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-container{
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.login-box{
+  width:100%;
+  max-width:420px;
+  background:#181818;
+  padding:40px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.login-box h1{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.input-group{
+  margin-bottom:20px;
+}
+
+.input-group label{
+  display:block;
+  margin-bottom:8px;
+  color:#bbb;
+}
+
+.input-group input,
+.input-group textarea{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #333;
+  background:#101010;
+  color:#fff;
+  outline:none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+  border-color:#39ff14;
+  box-shadow:0 0 10px rgba(57,255,20,0.3);
+}
+
+/* =========================================
+   DASHBOARD
+========================================= */
+
+.dashboard-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.dashboard-actions{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card{
+  background:#181818;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.project-card:hover{
+  transform:translateY(-8px);
+}
+
+.project-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.project-content{
+  padding:20px;
+}
+
+.project-content h3{
+  margin-bottom:10px;
+}
+
+.project-content p{
+  color:#bbb;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+
+.card-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.delete-btn{
+  background:#ff2e2e;
+  color:#fff;
+}
+
+.delete-btn:hover{
+  background:#ff0000;
+}
+
+/* =========================================
+   TESTIMONIAL CARD
+========================================= */
+
+.testimonial-card{
+  background:#181818;
+  padding:25px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.testimonial-top{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.testimonial-top img{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #39ff14;
+}
+
+.testimonial-top h3{
+  margin-bottom:5px;
+}
+
+.testimonial-message{
+  color:#ccc;
+  line-height:1.7;
+}
+
+/* =========================================
+   FORM PAGES
+========================================= */
+
+.form-container{
+  max-width:700px;
+  margin:auto;
+  background:#181818;
+  padding:40px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+.form-container h1{
+  margin-bottom:30px;
+  text-align:center;
+}
+
+textarea{
+  min-height:140px;
+  resize:none;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.admin-nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:30px;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.admin-nav .logo{
+  font-size:1.5rem;
+  font-weight:bold;
+  color:#39ff14;
+}
+
+.admin-nav-links{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty{
+  text-align:center;
+  color:#888;
+  margin-top:50px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+  body{
+    padding:20px;
+  }
+
+  .dashboard-header{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .dashboard-actions{
+    width:100%;
+  }
+
+  .dashboard-actions a{
+    width:100%;
+    text-align:center;
+  }
+
+  .form-container,
+  .login-box{
+    padding:25px;
+  }
+
+  .project-card img{
+    height:200px;
+  }
+}

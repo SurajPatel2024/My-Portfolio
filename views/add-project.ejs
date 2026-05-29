@@ -1,0 +1,188 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Project</title>
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0f0f0f;
+      color:white;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:30px;
+    }
+
+    .container{
+      width:100%;
+      max-width:650px;
+      background:#181818;
+      padding:35px;
+      border-radius:20px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 0 30px rgba(0,255,100,0.15);
+    }
+
+    h1{
+      text-align:center;
+      margin-bottom:30px;
+      color:#39ff14;
+      font-size:2rem;
+    }
+
+    .input-group{
+      margin-bottom:20px;
+    }
+
+    .input-group label{
+      display:block;
+      margin-bottom:10px;
+      font-size:15px;
+      color:#ccc;
+    }
+
+    .input-group input,
+    .input-group textarea,
+    .input-group select{
+      width:100%;
+      padding:14px;
+      border:none;
+      outline:none;
+      border-radius:12px;
+      background:#222;
+      color:white;
+      border:1px solid #333;
+      transition:0.3s;
+      font-size:15px;
+    }
+
+    .input-group textarea{
+      resize:none;
+      height:130px;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus,
+    .input-group select:focus{
+      border-color:#39ff14;
+      box-shadow:0 0 15px rgba(57,255,20,0.3);
+    }
+
+    .btn{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:12px;
+      background:#39ff14;
+      color:#111;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+      background:#28d60f;
+      box-shadow:0 10px 25px rgba(57,255,20,0.35);
+    }
+
+    .back{
+      display:inline-block;
+      margin-top:20px;
+      color:#39ff14;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    .back:hover{
+      text-decoration:underline;
+    }
+
+    @media(max-width:600px){
+
+      .container{
+        padding:25px;
+      }
+
+      h1{
+        font-size:1.7rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <h1><i class="fas fa-code"></i> Add Project</h1>
+
+    <form action="/add-project" method="POST">
+
+      <div class="input-group">
+        <label>Project Title</label>
+        <input type="text" name="title" required>
+      </div>
+
+      <div class="input-group">
+        <label>Description</label>
+        <textarea name="description" required></textarea>
+      </div>
+
+      <div class="input-group">
+        <label>Image URL</label>
+        <input type="text" name="image" required>
+      </div>
+
+      <div class="input-group">
+        <label>Live Project Link</label>
+        <input type="text" name="liveLink" required>
+      </div>
+
+      <div class="input-group">
+        <label>Category</label>
+
+        <select name="category">
+
+          <option value="frontend">Frontend</option>
+
+          <option value="backend">Backend</option>
+
+          <option value="fullstack">Full Stack</option>
+
+        </select>
+      </div>
+
+      <button class="btn">
+        <i class="fas fa-plus"></i> Add Project
+      </button>
+
+    </form>
+
+    <a href="/dashboard" class="back">
+      ← Back To Dashboard
+    </a>
+
+  </div>
+
+</body>
+</html>
+ 
