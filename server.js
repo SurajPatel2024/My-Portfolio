@@ -24,9 +24,10 @@ mongoose.connect(process.env.MONGO_URI)
 });
 
 // View Engine & Views Path Config
+// View Engine
+const path = require("path"); // अगर 'path' ऊपर इम्पोर्ट नहीं है तो
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views")); // ✅ Vercel के लिए पाथ सेट किया
-
+app.set("views", path.join(__dirname, "views"));
 // Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
